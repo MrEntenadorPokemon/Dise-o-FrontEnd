@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina</title>
+
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #d6eaf8;
+        }
+
+        body {
+            background-image: url('fondo.jpg');
+            background-size: cover;       /* La imagen cubre toda la pantalla */
+            background-repeat: no-repeat; /* Evita que se repita */
+            background-attachment: fixed; /* Hace que el fondo quede estático al hacer scroll */
+            background-position: center;  /* Centra la imagen */
+            margin: 0;                     /* Elimina márgenes del body */
+    }
+        nav {
+            width: 40%;
+            background-color: #3498db;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f1c40f;
+        }
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>primera pagina</h1>
+    </header>
+    <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#about">Acerca de</a>
+            <a href="#contact">Contacto</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Video</a>
+        
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h2>Inicio<h2>
+            <p>Luis Alberto Morales Medina</p>
+            <p>Andre Siqueiros Perez</p>
+            <p>Esta es una pagina de prueba</p>
+            <img src="like.jpeg" alt="">
+        </section>
+
+        <section id="about">
+            <h2>Acerca de</h2>
+            <p>Esta pagina fue creada para demostrar la estructura basica de HTML.</p>
+            <ul>
+                <li>ejemplo lista 1</li>
+                <li>ejemplo lista 2</li>
+                <li>ejemplo lista 3</li>
+            </ul>
+            <ol>
+                <li>ejemplo ordenado 1</li>
+                <li>ejemplo ordenado 2</li>
+                <li>ejemplo ordenado 3</li>
+            </ol>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form action="/submit_form" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+        <section>
+            <h2>Tabla de datos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Encabezado 1</th>
+                        <th>Encabezado 2</th>
+                        <th>Encabezado 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>dato 1</td>
+                        <td>dato 2</td>
+                        <td>dato 3</td>
+                    </tr>
+                    <tr>
+                        <td>dato 4</td>
+                        <td>dato 5</td>
+                        <td>dato 6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <footer>
+        <p>&copy;2024 Mi primer sitio web. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
