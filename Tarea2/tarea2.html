@@ -1,61 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yo</title>
+    <style>
+        body {
+            background: #f7f7fc;
+            color: #22223b;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 32px auto;
+            padding: 0 16px;
+        }
+        header {
+            background-color: #a259f7;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(162,89,247,0.08);
+            margin-bottom: 24px;
+        }
+        nav {
+            background-color: #4ea8de;
+            padding: 12px 0;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 16px;
+            font-weight: bold;
+            font-size: 1.08em;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #f7b2b7;
+        }
+        .datos {
+            background: #f7b2b7;
+            border-radius: 12px;
+            padding: 16px 24px;
+            box-shadow: 0 2px 8px rgba(247,178,183,0.08);
+            margin-bottom: 24px;
+        }
+        .cuadro-hobbies {
+            background: #a259f7;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(162,89,247,0.08);
+            padding: 24px 32px;
+            margin: 0 auto 32px auto;
+            max-width: 400px;
+            color: #fff;
+        }
+        .cuadro-hobbies h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(34,34,35,0.08);
+        }
+        .cuadro-hobbies ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        .cuadro-hobbies li {
+            margin-bottom: 8px;
+            padding: 4px 0;
+            list-style-type: "💡 ";
+            color: #fff;
+        }
+        section#musica {
+            margin-top: 32px;
+        }
+        .cuadro-musica {
+            background: #4ea8de;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(78,168,222,0.08);
+            padding: 24px 32px;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+        .cuadro-musica h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #fff;
+        }
+        .artistas {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        figure img {
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 8px;
+        }
+        figcaption a {
+            color: #fff;
+            text-decoration: underline;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+        figcaption a:hover {
+            color: #f7b2b7;
+        }
+        footer {
+            background: #a259f7;
+            color: #fff;
+            border-radius: 12px;
+            padding: 12px;
+            margin: 40px auto 0 auto;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 2px 8px rgba(162,89,247,0.08);
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Sobre mi</h1>
-    </header>
-    <nav>
-        <a href="tarea2.html">Inicio</a>
-        <a href="#datos">Datos sobre mi</a>
-        <a href="#musica">Musica que me gusta</a>
-    </nav>
-
-    <div class="content">
+    <div class="container">
+        <header>
+            <h1>Sobre mí</h1>
+        </header>
+        <nav>
+            <a href="tarea2.html">Inicio</a>
+            <a href="#datos">Datos sobre mí</a>
+            <a href="#musica">Música que me gusta</a>
+        </nav>
         <section id="datos">
-        <p>Hola profe, mi nombre es Andre Siqueiros, 
-            me gusta escuchar musica, escribir y todo lo relacionado a la computacion (excepto programar)</p>
-        
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Escritura y Poesia</li>
-            <li>Escuchar Musica</li>
-            <li>Armar/contruir computadoras y servidores</li>
-            <li>Computacion en general</li>
-            <li>Jugar videojuegos</li>
-        </ul>
-    </div>
-        <section id="musica">
-            <h2>Musica y Artistas que me gustan (algunos ejemplos)</h2>
-            <div>
-                <figure>
-                    <img src="https://i.scdn.co/image/ab67616d0000b273912cc8fe2e9a53d328757a41" alt="Nujabes - Feather" style="width: 100px; height: 100px;">
-                    <figcaption>
-                        <a href="https://www.youtube.com/watch?v=hQ5x8pHoIPA">Nujabes - Feather</a>
-                    </figcaption>
-                </figure>
-                                <figure>
-                    <img src="https://i.scdn.co/image/ab67616d0000b27366f128e383614b0aa4df5ebd" alt="Enjambre - Mania Cardiaca" style="width: 100px; height: 100px;">
-                    <figcaption>
-                        <a href="https://www.youtube.com/watch?v=FuC0O742JVQ">Enjambre - Mania Cardiaca</a>
-                    </figcaption>
-                </figure>
-                                <figure>
-                    <img src="https://i.scdn.co/image/ab67616d00001e02d4e47acb74a171a6d16d324e" alt="Shimbashi Station - Hit the Wall" style="width: 100px; height: 100px;">
-                    <figcaption>
-                        <a href="https://www.youtube.com/watch?v=ZesjB78y1so">Shimbashi Station - Hit the Wall</a>
-                    </figcaption>
-                </figure>
-            </div> 
+            <p class="datos">
+                Hola profe, mi nombre es Andre Siqueiros, 
+                me gusta escuchar música, escribir y todo lo relacionado a la computación (excepto programar)
+            </p>
+            <div class="cuadro-hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Escritura y Poesía</li>
+                    <li>Escuchar Música</li>
+                    <li>Armar/construir computadoras y servidores</li>
+                    <li>Computación en general</li>
+                    <li>Jugar videojuegos</li>
+                </ul>
+            </div>
         </section>
-
+        <section id="musica">
+            <div class="cuadro-musica">
+                <h2>Música y Artistas que me gustan (algunos ejemplos)</h2>
+                <div class="artistas">
+                    <figure>
+                        <img src="https://i.scdn.co/image/ab67616d0000b273912cc8fe2e9a53d328757a41" alt="Nujabes - Feather" width="100" height="100">
+                        <figcaption>
+                            <a href="https://www.youtube.com/watch?v=hQ5x8pHoIPA" target="_blank">Nujabes - Feather</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://i.scdn.co/image/ab67616d0000b27366f128e383614b0aa4df5ebd" alt="Enjambre - Mania Cardiaca" width="100" height="100">
+                        <figcaption>
+                            <a href="https://www.youtube.com/watch?v=FuC0O742JVQ" target="_blank">Enjambre - Mania Cardiaca</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02d4e47acb74a171a6d16d324e" alt="Shimbashi Station - Hit the Wall" width="100" height="100">
+                        <figcaption>
+                            <a href="https://www.youtube.com/watch?v=ZesjB78y1so" target="_blank">Shimbashi Station - Hit the Wall</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
         <footer>
             <p>Andre Siqueiros Perez</p>
-            <p>Fecha de creacion: 18/Agosto/2025</p>
+            <p>Fecha de creación: 18/Agosto/2025</p>
         </footer>
+    </div>
 </body>
 </html>
