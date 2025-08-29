@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre Siqueiros</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cafeteria Alexia</h1>
+            <p class="muted">Cafe de Especialidad y pan artesanal en Hermosillo.
+
+                <nav aria-label="Navegacion principal">
+
+                </nav>
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="Menu" aria-labelledby="titulo-menu">
+            <h2 id="titulo-menu">Menu</h2>
+            <p class="muted"> Bebidas y panes del dia</p>
+
+            <div class="grid grid-3">
+                <article>
+                    <figure>
+                        <img src="cafe.jpg" alt="Espresso servido en taza" />
+                        <figcaption>Espresso Simple</figcaption>
+                    </figure>
+                    <h3>Espresso Simple</h3>
+                    <p>Extraccion Precisa, tueste medio. <span class="pill">Nuevo</span></p>
+                    <table>
+                        <thead>
+                            <tr><th>Tamaños</th><th>Precio</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Simple</td><td>$35</td></tr>
+                            <tr><td>Doble</td><td>$45</td></tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="cafe.jpg" alt="Latte" width="100%" height="auto"/>
+                        <figcaption>Latte Clasico</figcaption>
+                    </figure>
+                    <h3>Latte</h3>
+                    <p>Suave con leche vaporizada.</p>
+                    <table>
+                        <thead>
+                            <tr><th>Tamaños</th><th>Precio</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>12 oz</td><td>$55</td></tr>
+                            <tr><td>16 oz</td><td>$65</td></tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="croassant.jpg" alt="Croassant" width="100%" height="auto"/>
+                        <figcaption>Croassant</figcaption>
+                    </figure>
+                    <h3>Croassant</h3>
+                    <p>Delicioso pan hojaldrado.</p>
+                    <table>
+                        <thead>
+                            <tr><th>Variante</th><th>Precio</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Clasico</td><td>$38</td></tr>
+                            <tr><td>Chocolate</td><td>$45</td></tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+        </section>
+
+        <section id="articulos" aria-labelledby="titulo-articulos">
+            <h2 id="titulo-articulos">Artículos Recientes</h2>
+
+            <div class="grid grid-2">
+                <div>
+                <article>
+                    <h3>Que es un expresso perfecto?</h3>
+                    <p class="muted"><time datetime="2025-08-26">26 de Agosto de 2025</time> - 3 min de lectura</p>
+                    <p>Un expresso perfecto equilibra aroma, cuerpo y acidez. Factores clave incluyen la calidad del grano, la molienda y la técnica de extracción.</p>
+                    <p><a href="#leer-mas-expresso">Leer más...</a></p>
+                </article>
+
+                <article>
+                    <h1>De la finca a tu taza</h1>
+                    <p class="muted"><time datetime="2025-08-20">20 de Agosto de 2025</time> - 4 min de lectura</p>
+                    <p>El viaje del café comienza en la finca, donde se cultivan los granos. Cada etapa, desde la cosecha hasta el tueste, influye en el sabor final.</p>
+                    <p><a href="#leer-mas-finca">Leer más...</a></p>
+                </article>
+
+                <aside aria-label="Informacion adicional">
+                    <h4> Horarios y ubicacion </h4>
+                    <address>
+                        Blvd. Universidad 76, Hermosillo, Sonora<br>
+                        Lun-Sab: 8:00 AM - 6:00 PM - Dom: Cerrado
+                    </address>
+                    <p class="muted">WI-FI gratis - Pet friendly - Terraza</p>
+                </aside>
+                </div>
+            </section>
+
+            <section id="Galeria" aria-labelledby="titulo-galeria">
+                <h2 id="titulo-galeria">Galeria</h2>
+                <div class="grid grid-3">
+                    <figure>
+                        <img src="cafe.jpg" alt="Taza de cafe espresso" width="100%" height="auto"/>
+                        <figcaption>Espresso</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="cafe.jpg" alt="Latte con arte latte" width="100%" height="auto"/>
+                        <figcaption>Latte</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="croassant.jpg" alt="Croassant" width="100%" height="auto"/>
+                        <figcaption>Croassant</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="contacto" aria-labelledby="titulo-contacto">
+                <h3 id="titulo-contacto">Contacto</h3>
+                <form accept="#" method="post">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Su Nombre" required />
+                    </div>
+                    <div>
+                        <label for="email">Correo:</label>
+                        <input type="email" id="email" name="email" placeholder="Su Correo" required />
+                    </div>
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                    <p class="muted">Gracias por contactarnos. Te responderemos pronto.</p>
+                </form>
+            </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p> <span id="anio">2025</span> Cafeteria - Todos los derechos son reservados</p>
+            <nav aria-label="Navegacion Secundaria">
+                <ul style="color: bisque;">
+                    <li><a href="#Aviso" style="color: #9ad">Aviso de privacidad</a></li>
+                    <li><a href="#Terminos" style="color: #9ad">Terminos y Condiciones</a></li>
+                </ul>
+            </nav>
+            <small class="muted">Diseñado por Andre Siqueiros</small>
+        </div>
+    </footer>
+</body>
+</html>
