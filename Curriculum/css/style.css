@@ -1,0 +1,171 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0; 
+    padding: 0;
+    background: #ffffff;
+    color: #222;
+}
+
+/* Espaciado y padding para los principales bloques */
+header, nav, section, article, footer {
+    padding: 12px; 
+    margin: 8px;
+}
+
+/* Encabezado con fondo, bordes y sombra */
+header {
+    background: #e3e7ea;
+    border-radius: 0 0 12px 12px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Barra de navegación con fondo y sombra */
+nav {
+    background: #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Navegación: lista horizontal y centrada */
+nav ul{
+    list-style: none; 
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Elementos de la lista de navegación */
+nav li{
+    display: inline; 
+    margin-right: 10px;
+}
+
+/* Enlaces de navegación con estilos y efecto hover */
+nav a{
+    text-decoration: none; 
+    color: #333;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+nav a:hover{
+    background: #ccc;
+    color: blue;
+}
+
+/* Secciones y artículos con fondo, bordes redondeados y sombra */
+section, article{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    padding: 12px;
+}
+
+/* Títulos con color personalizado */
+h3{
+    color: #435586
+}
+
+h2{
+    color: #1b3c53;
+    border-bottom: #1b3c53;
+}
+
+/* Tabla de conocimientos: ancho completo y bordes */
+table{
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 12px;
+}
+th, td{
+    border: 1px solid;
+    padding: 8px;
+    text-align: left;
+}
+th{
+    background: #f4f4f4;
+}
+
+/* Inputs, textarea y botón del formulario con bordes redondeados y espaciado */
+input, textarea, button{
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px; 
+    width: 100%; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+/* Botón con color y efecto hover */
+button{
+    background: #435586; 
+    color: white; 
+    border: none;
+    cursor: pointer; 
+    font-weight: bold;
+    transition: background 0.2s;
+}
+button:hover{
+    background-color: #1b3c53;
+}
+
+/* Pie de página con fondo oscuro y texto centrado */
+footer{
+    background: #222; 
+    color: white; 
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Imágenes: ancho máximo y altura automática */
+img{
+    max-width: 100%; 
+    height: auto;
+}
+
+/* Galería de imágenes de proyectos y PCs */
+.pc-gallery {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px;
+    justify-content: left;
+    margin-top: 12px;
+}
+
+/* Imágenes dentro de la galería con bordes, sombra y efecto hover */
+.pc-gallery img{
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #e3e7ea;
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    background: #f9fafb;
+    transition: transform 0.2s;
+}
+.pc-gallery img:hover{
+    transform: scale(1.05);
+}
+
+/* Texto debajo de las imágenes de la galería */
+.pc-gallery figcaption{
+    text-align: center;
+    font-size: 0.95em;
+    color: #607d8b;
+    margin-top: 6px;
+}
+
+/* Texto secundario (muted) */
+.muted{
+    color: grey; 
+    font-size: 0.9em;
+}

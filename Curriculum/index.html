@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Andre Siqueiros</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- Header: Encabezado de la pagina -->
+    <header>
+        <h1>Andre Siqueiros</h1>
+        <p class="muted">Ingenieria en Sistemas de Información</p>
+    </header>
+
+    <!-- NAV: Barra de Navegacion-->
+     <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+     </nav>
+
+     <!-- Seccion: Inicio -->
+      <section id="inicio">
+        <h2>Sobre Mi</h2>
+        <!-- Escribir un parrafo describiendo al autor -->
+        <p>Hola, soy Andre Siqueiros, un apasionado de la ingeniería en sistemas de información. Me encanta aprender nuevas tecnologías y enfrentar desafíos.</p>
+
+        <!-- Ecribir sobre tus experiencias -->
+         <h3>Experiencia</h3>
+         <ul>
+            <li>Desarrollador Web en SPConsultores</li>
+            <li>Servicio técnico a Computación</li>
+         </ul>
+
+         <figure class="pc-gallery">
+            <!-- Imagen Mia que de contexto a mi educacion-->
+             <img src="img/Yo.JPG" width="200" height="200" alt="Imagen de Andre Siqueiros">
+             <figcaption>Andre Siqueiros - Ingeniero en Sistemas de Información</figcaption>
+         </figure>
+      </section>
+
+      <!--Seccion: Galeria-->
+      <section id="galeria">
+         <h2>Galería</h2>
+
+         <!-- Articulo 1-->
+          <article>
+             <h3>Este mismo Curriculum</h3>
+             <p>Este curriculum que esta leyendo, yo lo hice programado.</p>
+             <figure class="pc-gallery">
+                <img src="https://picsum.photos/seed/picsum/200/300" alt="Proyecto 1">
+                <figcaption>Utilizando HTML, CSS y JavaScript pude crear este curriculum interactivo donde me doy a conocer</figcaption>
+             </figure>
+          </article>
+
+          <article>
+            <h3> Proyecto de Redes Informaticas </h3>
+            <p>Proyecto de redes consiste en la creacion de conexiones dentro de una empresa de manera local y remota</p>
+            <figure class="pc-gallery">
+               <img src="https://picsum.photos/seed/picsum/200/300" alt="Proyecto 2">
+               <figcaption>Descripción del Proyecto de Redes Informáticas</figcaption>
+            </figure>
+          </article>
+
+          <article>
+            <h3> Ensamblaje de Computadoras</h3>
+            <p>Proyecto de ensamblaje consiste en la construcción y configuración de computadoras para su óptimo funcionamiento.</p>
+            <figure>
+                <figure class="pc-gallery">
+                    <div>
+                        <img src="img/PC1.JPG" alt="PC1">
+                        <figcaption>Computadora ensamblada</figcaption>
+                    </div>
+                    <div>
+                        <img src="img/PC2.JPG" alt="PC2">
+                        <figcaption>Otra vista del ensamblaje</figcaption>
+                    </div>
+                </figure>
+            </figure>
+          </article>
+
+          <!-- Tabla -->
+           <h3>Tabla de Conocimientos</h3>
+           <table>
+            <thead>
+                <tr>
+                    <th>Interés</th>
+                    <th>Nivel (1-5)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Personalizar con mis intereses -->
+                <tr>
+                    <td>Desarrollo Web</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Base de Datos</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Programacion Frontend</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Redes Informaticas</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+           </table>
+      </section>
+
+      <!-- Seccion: Contacto -->
+       <section id="contacto">
+        <h2>Contacto</h2>
+        <!-- Formulario -->
+         <form>
+            <!-- Nombres -->
+             <label for="nombre">Nombre:</label>
+             <input type="text" id="nombre" name="nombre" required>
+
+            <!-- Correo Electrónico -->
+             <label for="email">Correo Electrónico:</label>
+             <input type="email" id="email" name="email" required>
+
+            <!-- Mensaje -->
+             <label for="mensaje">Mensaje:</label>
+             <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+            <!-- Botón de Envío -->
+             <button type="submit">Enviar</button>
+         </form>
+       </section>
+
+       <section>
+        <!-- Puedes agregar contenido adicional aquí si lo deseas -->
+       </section>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Andre Siqueiros. Todos los derechos reservados.</p>
+        </footer>
+</body>
+</html>
