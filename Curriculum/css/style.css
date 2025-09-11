@@ -3,7 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif; 
     margin: 0; 
     padding: 0;
-    background: #ffffff;
+    background: #7eceee;
     color: #222;
 }
 
@@ -55,7 +55,7 @@ nav a{
 }
 nav a:hover{
     background: #ccc;
-    color: blue;
+    color: #7eceee;
 }
 
 /* Secciones y artículos con fondo, bordes redondeados y sombra */
@@ -168,4 +168,16 @@ img{
 .muted{
     color: grey; 
     font-size: 0.9em;
+}
+
+.highlight{
+    background: #ec6969; 
+    padding: 2px 4px; 
+    border-radius: 4px;
+}
+
+mark{
+    background: #f08a8a; 
+    padding: 2px 4px; 
+    border-radius: 4px;
 }
