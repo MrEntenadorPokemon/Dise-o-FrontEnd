@@ -1,19 +1,25 @@
-/* Estilos generales para el cuerpo de la página */
+/* ===========================
+   1. Estilos Generales
+=========================== */
 body {
     font-family: Arial, Helvetica, sans-serif; 
     margin: 0; 
     padding: 0;
-    background: #7eceee;
-    color: #222;
+    background: #7eceee; /* Fondo azul claro */
+    color: #222;         /* Texto principal oscuro */
 }
 
-/* Espaciado y padding para los principales bloques */
+/* ===========================
+   2. Estructura Principal
+=========================== */
 header, nav, section, article, footer {
     padding: 12px; 
     margin: 8px;
 }
 
-/* Encabezado con fondo, bordes y sombra */
+/* ===========================
+   3. Encabezado
+=========================== */
 header {
     background: #e3e7ea;
     border-radius: 0 0 12px 12px;
@@ -21,79 +27,117 @@ header {
     border-top: 2px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+h1 {
+    color: #1b3c53;
+    border-bottom: #1b3c53;
+}
+h1:hover {
+    color: yellow;
+    transform: scale(1);
+}
+#bienvenida {
+    font-size: 1.1em;
+    color: #435586;
+    font-weight: 500;
+    margin-top: 8px;
+    transition: opacity 0.8s ease-in-out;
+}
 
-/* Barra de navegación con fondo y sombra */
+/* ===========================
+   4. Navegación
+=========================== */
 nav {
-    background: #ddd;
+    background: var(--bs-secondary);
     border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-/* Navegación: lista horizontal y centrada */
-nav ul{
+nav ul {
     list-style: none; 
     padding: 0;
     display: flex; 
     justify-content: center;
     gap: 16px;
 }
-
-/* Elementos de la lista de navegación */
-nav li{
+nav li {
     display: inline; 
     margin-right: 10px;
 }
-
-/* Enlaces de navegación con estilos y efecto hover */
-nav a{
-    text-decoration: none; 
-    color: #333;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: background 0.2s;
+nav a {
+    color: #fff;
 }
-nav a:hover{
-    background: #ccc;
-    color: #7eceee;
+nav a:hover {
+    background: transparent;
+    color: var(--bs-primary) !important;
 }
 
-/* Secciones y artículos con fondo, bordes redondeados y sombra */
-section, article{
+/* ===========================
+   5. Secciones y Artículos
+=========================== */
+section, article {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 15px;
     padding: 12px;
 }
-
-/* Títulos con color personalizado */
-h3{
-    color: #435586
+article:hover {
+    background-color: #d1e0ff;
+    transform: scale(1.02);
+    transition: 0.3s;
 }
 
-h2{
+/* ===========================
+   6. Títulos
+=========================== */
+h1, h2, h3 {
+    letter-spacing: 1px;
+}
+h2 {
     color: #1b3c53;
     border-bottom: #1b3c53;
 }
+h3 {
+    color: #435586;
+}
 
-/* Tabla de conocimientos: ancho completo y bordes */
-table{
+/* ===========================
+   7. Tablas
+=========================== */
+table {
     width: 100%; 
     border-collapse: collapse; 
     margin-top: 12px;
 }
-th, td{
+th, td {
     border: 1px solid;
     padding: 8px;
     text-align: left;
 }
-th{
+th {
     background: #f4f4f4;
 }
+thead th {
+    position: sticky;
+    top: 72px;
+    background: #34495e;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: .5px;
+}
+tbody tr {
+    border-bottom: 1px solid #ebe5e9;
+}
+table tr:nth-child(even) {
+    background-color: #e3e7ea;
+}
+table tr:nth-child(odd) {
+    background-color: #f9fafc;
+}
 
-/* Inputs, textarea y botón del formulario con bordes redondeados y espaciado */
-input, textarea, button{
+/* ===========================
+   8. Formularios
+=========================== */
+input, textarea, button {
     border-radius: 6px;
     border: 1px solid #ccc;
     padding: 8px; 
@@ -102,82 +146,171 @@ input, textarea, button{
     margin-top: 6px;
     margin-bottom: 12px;
 }
-
-/* Botón con color y efecto hover */
-button{
+button {
     background: #435586; 
     color: white; 
     border: none;
     cursor: pointer; 
     font-weight: bold;
     transition: background 0.2s;
+    border-radius: 8px;
 }
-button:hover{
+button:hover {
     background-color: #1b3c53;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#descargarPDF {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    right: 24px;
+    bottom: 24px;
+    font-size: 16px;
+}
+#descargarPDF:hover {
+    background: #218838;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
 }
 
-/* Pie de página con fondo oscuro y texto centrado */
-footer{
-    background: #222; 
-    color: white; 
-    text-align: center;
-    padding: 16px;
+/* ===========================
+   9. Pie de Página
+=========================== */
+footer {
+    background: var(--bs-secondary);
+    color: #fff;
     border-radius: 12px 12px 0 0;
 }
 
-/* Imágenes: ancho máximo y altura automática */
-img{
+/* ===========================
+   10. Imágenes y Galerías
+=========================== */
+img {
     max-width: 100%; 
     height: auto;
 }
-
-/* Galería de imágenes de proyectos y PCs */
 .pc-gallery {
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: space-between;
     gap: 20px;
     justify-content: left;
     margin-top: 12px;
 }
-
-/* Imágenes dentro de la galería con bordes, sombra y efecto hover */
-.pc-gallery img{
+.pc-gallery img {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border: 1px solid #e3e7ea;
-    width: 200px;
+    width: 300px;
     height: 160px;
     object-fit: cover;
     background: #f9fafb;
     transition: transform 0.2s;
 }
-.pc-gallery img:hover{
+.pc-gallery img:hover {
     transform: scale(1.05);
 }
-
-/* Texto debajo de las imágenes de la galería */
-.pc-gallery figcaption{
+.pc-gallery figcaption {
     text-align: center;
     font-size: 0.95em;
     color: #607d8b;
     margin-top: 6px;
 }
 
-/* Texto secundario (muted) */
-.muted{
+/* ===========================
+   11. Utilidades y Clases Extra
+=========================== */
+.muted {
     color: grey; 
     font-size: 0.9em;
 }
-
-.highlight{
-    background: #ec6969; 
-    padding: 2px 4px; 
+.highlight {
+    color: red;
+    padding: 2px 6px;
     border-radius: 4px;
 }
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
 
-mark{
-    background: #f08a8a; 
-    padding: 2px 4px; 
-    border-radius: 4px;
+/* ===========================
+   12. Carrucel de Imágenes
+=========================== */
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 32px auto;
+    padding: 16px 0;
+    background: #f9fafc;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    max-width: 600px;
+}
+.carrusel-container img {
+    width: 340px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border: 1px solid #e3e7ea;
+    background: #fff;
+}
+.carrusel-container button {
+    background: #435586;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.carrusel-container button:hover {
+    background: #1b3c53;
+    transform: scale(1.08);
+}
+
+/* ===========================
+   13. Bootstrap
+=========================== */
+:root {
+    --bs-primary: #2ecc71;
+    --bs-secondary: #34495e;
+    --bs-info: #1abc9c;
+    --bs-body-bg: #f8f9fa;
+    --bs-body-color: #212529;
+}
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+.btn-success {
+    background-color: var(--bs-info);
+    border-color: var(--bs-info);
+}
+.btn-success:hover {
+    background-color: #16a085;
+    border-color: #16a085;
+}
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card-title {
+    color: var(--bs-secondary);
+    font-weight: 600;
 }
