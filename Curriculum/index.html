@@ -35,24 +35,24 @@
         <div class="row">
             <div class="col-md-6 mb-4">
                 <h2>Sobre Mi</h2>
-                <!-- Quien soy xd -->
-                <p>
-                    Hola, soy Andre Siqueiros, un apasionado de la
-                    <span class="highlight">ingeniería en sistemas de información.</span>
-                    Me encanta aprender nuevas tecnologías y enfrentar desafíos.
-                </p>
-            </div>
-            <!-- Lista de Experiencias -->
-            <h3>Experiencia</h3>
-            <ul>
-                <li>Desarrollador Web en SPConsultores</li>
-                <li>Servicio técnico a Computación</li>
-            </ul>
-            <div class="col-md-6 mb-4">
-                <figure class="pc-gallery">
-                    <img src="img/Yo.JPG" width="200" height="200" alt="Imagen de Andre Siqueiros">
-                    <figcaption>Andre Siqueiros - Ingeniero en Sistemas de Información</figcaption>
-                </figure>
+                    <!-- Quien soy xd -->
+                    <p>
+                        Hola, soy Andre Siqueiros, un apasionado de la
+                        <span class="highlight">ingeniería en sistemas de información.</span>
+                        Me encanta aprender nuevas tecnologías y enfrentar desafíos.
+                    </p>
+                <!-- Lista de Experiencias -->
+                <h3>Experiencia</h3>
+                <ul>
+                    <li>Desarrollador Web en SPConsultores</li>
+                    <li>Servicio técnico a Computación</li>
+                </ul>
+                <div class="col-md-6 mb-4">
+                    <figure class="pc-gallery">
+                        <img src="img/Yo.JPG" width="200" height="200" alt="Imagen de Andre Siqueiros">
+                        <figcaption>Andre Siqueiros - Ingeniero en Sistemas de Información</figcaption>
+                    </figure>
+                </div>
             </div>
         </div>
     </section>
@@ -60,12 +60,12 @@
     <!-- ===========================
          Sección: Galería
     ============================ -->
-    <section id="galeria" class="container my-5">
+    <section id="galeria" class="container my-5 p-4 shadow">
         <h2 class="text-center mb-4">Galería</h2>
         <div class="row g-4">
             <!-- Articulo 1 -->
             <article class="col-md-4">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 p-3">
                     <img src="img/CV.png" class="card-img-top" alt="Proyecto 1">
                     <div class="card-body">
                         <h5 class="card-title">Este mismo Curriculum</h5>
@@ -75,7 +75,7 @@
             </article>
             <!-- Articulo 2 -->
             <article class="col-md-4">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 p-3">
                     <img src="img/ProyectoRedes.png" class="card-img-top" alt="Proyecto 2">
                     <div class="card-body">
                         <h5 class="card-title">Proyecto de Redes Informáticas</h5>
@@ -85,7 +85,7 @@
             </article>
             <!-- Articulo 3 -->
             <article class="col-md-3">
-                <div class="card shadow-sm h-100">
+                <div class="card shadow-sm h-100 p-3">
                     <div id="pcCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -114,31 +114,48 @@
     <!-- ===========================
          Tabla de Conocimientos
     ============================ -->
-    <h3>Tabla de Conocimientos</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Interés</th>
-                <th>Nivel (1-5)</th>
-            </tr>
-        </thead>
+    <h3 class="text-center mb-4">Tabla de Conocimientos</h3>
+        <table class="container my-5 p-4 shadow table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Intereses</th>
+                    <th scope="col">Nivel (1-10)</th>
+                </tr>
+            </thead>
         <tbody>
-            <!-- Personalizar con mis intereses -->
             <tr>
-                <td>Desarrollo Web</td>
-                <td>4</td>
+                <td>
+                <span class="badge bg-primary">Desarrollo Web</span>
+                <span class="badge bg-warning text-dark">HTML</span>
+                <span class="badge bg-success text-dark">CSS</span>
+                <span class="badge bg-danger text-dark">JavaScript</span>
+                </td>
+                <td>7</td>
             </tr>
             <tr>
-                <td>Base de Datos</td>
-                <td>3</td>
+                <td>
+                <span class="badge bg-primary">Servidores</span>
+                <span class="badge bg-success text-dark">Ubuntu Server</span>
+                <span class="badge bg-warning text-dark">Windows Server</span>
+                </td>
+                <td>5</td>
             </tr>
             <tr>
-                <td>Programacion Frontend</td>
-                <td>3</td>
+                <td>
+                    <span class="badge bg-primary">Bases de Datos</span>
+                    <span class="badge bg-warning text-dark">MySQL</span>
+                    <span class="badge bg-danger text-dark">PostgreSQL</span>
+                </td>
+                <td>6</td>
             </tr>
             <tr>
-                <td>Redes Informaticas</td>
-                <td>4</td>
+                <td>
+                    <span class="badge bg-primary">Redes Informaticas</span>
+                    <span class="badge bg-success text-dark">IPs</span>
+                    <span class="badge bg-success text-dark">Subnets</span>
+                    <span class="badge bg-success text-dark">VLANs</span>
+                </td>
+                <td>8</td>
             </tr>
         </tbody>
     </table>
@@ -147,9 +164,9 @@
          Sección: Contacto
     ============================ -->
     <section id="contacto">
-        <h2>Contacto</h2>
+        <h2 class="text-center my-5">Contacto</h2>
         <!-- Formulario -->
-        <form>
+        <form class="container my-5 p-4 shadow">
             <!-- Nombres -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -197,7 +214,7 @@
          Footer
     ============================ -->
     <footer>
-        <p>&copy; 2025 Andre Siqueiros. Todos los derechos reservados.</p>
+        <p class="text-center">&copy; 2025 Andre Siqueiros. Todos los derechos reservados.</p>
     </footer>
 
     <!-- ===========================
