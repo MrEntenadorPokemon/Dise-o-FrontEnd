@@ -5,8 +5,11 @@ body {
     font-family: Arial, Helvetica, sans-serif; 
     margin: 0; 
     padding: 0;
-    background: #7eceee; /* Fondo azul claro */
-    color: #222;         /* Texto principal oscuro */
+    /* Punto 8: Fondo personalizado */
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/light-grey-terrazzo.png');
+    background-color: #f4f8f9; /* Fallback */
+    background-attachment: fixed;
+    color: #222;
 }
 
 /* ===========================
@@ -17,27 +20,57 @@ header, nav, section, article, footer {
     margin: 8px;
 }
 
+/* Punto 4: Diseño de dos columnas */
+.main-container {
+    display: flex;
+    flex-wrap: wrap; /* Para responsividad */
+    gap: 16px;
+    padding: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.columna-izquierda {
+    flex: 1;
+    min-width: 300px; /* Ancho mínimo para la barra lateral */
+}
+.columna-derecha {
+    flex: 2;
+    min-width: 300px; /* Ancho mínimo para el contenido */
+}
+/* Responsividad para las columnas */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
 /* ===========================
    3. Encabezado
 =========================== */
 header {
-    background: #e3e7ea;
+    /* Punto 1: Fondo degradado */
+    background: linear-gradient(90deg, #435586, #1b3c53);
+    color: white; /* Texto claro para el degradado oscuro */
     border-radius: 0 0 12px 12px;
     border-bottom: 2px solid #ccc;
     border-top: 2px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center; /* Centrar título */
 }
 h1 {
-    color: #1b3c53;
-    border-bottom: #1b3c53;
+    color: #ffffff; /* Texto blanco para el degradado */
+    border-bottom: none;
 }
 h1:hover {
     color: yellow;
     transform: scale(1);
 }
+header .muted {
+    color: #d1e0ff; /* Muted claro */
+}
 #bienvenida {
     font-size: 1.1em;
-    color: #435586;
+    color: #ecf0f1; /* Welcome claro */
     font-weight: 500;
     margin-top: 8px;
     transition: opacity 0.8s ease-in-out;
@@ -58,6 +91,7 @@ nav ul {
     display: flex; 
     justify-content: center;
     gap: 16px;
+    margin-bottom: 0; /* Bootstrap override */
 }
 nav li {
     display: inline; 
@@ -82,13 +116,47 @@ section, article {
     border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 15px;
-    padding: 12px;
+    padding: 20px; /* Más padding */
 }
 article:hover {
     background-color: #d1e0ff;
     transform: scale(1.02);
     transition: 0.3s;
 }
+
+/* Punto 2: Foto de perfil circular */
+#foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #435586;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    object-fit: cover; /* Asegura que la imagen llene el círculo */
+    margin: 0 auto 15px auto;
+    display: block;
+    /* Punto 10: Animación en foto */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#foto-perfil:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    filter: brightness(1.05);
+}
+#sobre-mi figcaption {
+    text-align: center;
+    font-size: 0.95em;
+    color: #607d8b;
+    margin-top: 6px;
+}
+
+/* Punto 3: Separadores decorativos */
+.separador {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #435586, rgba(0, 0, 0, 0));
+    margin: 32px 0;
+}
+
 
 /* ===========================
    6. Títulos
@@ -98,54 +166,77 @@ h1, h2, h3 {
 }
 h2 {
     color: #1b3c53;
-    border-bottom: #1b3c53;
+    border-bottom: 2px solid #e3e7ea;
+    padding-bottom: 5px;
 }
 h3 {
     color: #435586;
 }
 
 /* ===========================
-   7. Tablas
+   7. Sección de Habilidades (Punto 5)
 =========================== */
-table {
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 12px;
+#habilidades .habilidad {
+    margin-bottom: 15px;
 }
-th, td {
-    border: 1px solid;
-    padding: 8px;
-    text-align: left;
+#habilidades .habilidad p {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #34495e;
 }
-th {
-    background: #f4f4f4;
-}
-thead th {
-    position: sticky;
-    top: 72px;
-    background: #34495e;
-    color: #fff;
-    z-index: 1;
-    letter-spacing: .5px;
-}
-tbody tr {
-    border-bottom: 1px solid #ebe5e9;
-}
-table tr:nth-child(even) {
+.progress-bar-container {
     background-color: #e3e7ea;
+    border-radius: 20px;
+    height: 22px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%;
 }
-table tr:nth-child(odd) {
-    background-color: #f9fafc;
-}
-.badge {
-    margin-right: 6px;
-    margin-bottom: 4px;
-    font-size: 2em;
-    padding: 0.5em 0.75em;
+.progress-bar {
+    /* Usando los colores de Bootstrap que te gustaron */
+    background: linear-gradient(90deg, var(--bs-info), var(--bs-primary));
+    height: 100%;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 22px;
+    font-weight: bold;
+    transition: width 0.8s ease-in-out;
 }
 
 /* ===========================
-   8. Formularios
+   8. Sección Redes Profesionales (Punto 6)
+=========================== */
+#redes .redes-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+#redes .redes-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #34495e;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+#redes .redes-links a:hover {
+    background-color: #e3e7ea;
+    transform: translateY(-3px);
+    color: #1b3c53;
+}
+#redes .redes-links .fab, 
+#redes .redes-links .fas {
+    font-size: 1.8em;
+    color: #435586;
+}
+
+/* ===========================
+   9. Formularios
 =========================== */
 input, textarea, button {
     border-radius: 6px;
@@ -162,7 +253,7 @@ button {
     border: none;
     cursor: pointer; 
     font-weight: bold;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     border-radius: 8px;
 }
 button:hover {
@@ -188,69 +279,42 @@ button:hover {
 }
 
 /* ===========================
-   9. Pie de Página
+   10. Pie de Página (Punto 7)
 =========================== */
 footer {
-    background: var(--bs-secondary);
-    color: #fff;
+    background: #34495e; /* var(--bs-secondary) */
+    color: #ecf0f1;
     border-radius: 12px 12px 0 0;
+    text-align: center;
+    padding: 20px;
+}
+.footer-redes {
+    margin: 10px 0;
+}
+.footer-redes a {
+    color: white;
+    font-size: 1.8em;
+    margin: 0 12px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+.footer-redes a:hover {
+    color: var(--bs-primary); /* Verde */
+    transform: scale(1.1);
+}
+footer p {
+    margin: 5px 0;
 }
 
+
 /* ===========================
-   10. Imágenes y Galerías
+   11. Imágenes y Galerías (Limpieza)
 =========================== */
 img {
     max-width: 100%; 
     height: auto;
 }
-.pc-gallery {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px;
-    justify-content: left;
-    margin-top: 12px;
-}
-.pc-gallery img {
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #e3e7ea;
-    width: 300px;
-    height: 160px;
-    object-fit: cover;
-    background: #f9fafb;
-    transition: transform 0.2s;
-}
-.pc-gallery img:hover {
-    transform: scale(1.05);
-}
-.pc-gallery figcaption {
-    text-align: center;
-    font-size: 0.95em;
-    color: #607d8b;
-    margin-top: 6px;
-}
-
-/* ===========================
-   11. Utilidades y Clases Extra
-=========================== */
-.muted {
-    color: grey; 
-    font-size: 0.9em;
-}
-.highlight {
-    color: red;
-    padding: 2px 6px;
-    border-radius: 4px;
-}
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-/* ===========================
-   12. Carrucel de Imágenes
-=========================== */
+/* Estilo .pc-gallery eliminado ya que la foto de perfil tiene su propio ID */
 .carrusel-container {
     display: flex;
     align-items: center;
@@ -289,8 +353,22 @@ img {
     transform: scale(1.08);
 }
 
+
 /* ===========================
-   13. Bootstrap
+   12. Utilidades y Clases Extra
+=========================== */
+.muted {
+    color: grey; 
+    font-size: 0.9em;
+}
+.highlight {
+    color: red;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* ===========================
+   13. Bootstrap (Sin cambios)
 =========================== */
 :root {
     --bs-primary: #2ecc71;
